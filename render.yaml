@@ -1,8 +1,3 @@
-databases:
-  - name: family-calendar-db
-    plan: free
-    databaseName: family_calendar
-
 services:
   - type: web
     name: family-calendar-api
@@ -13,7 +8,3 @@ services:
     envVars:
       - key: FAMILY_PASSWORD
         sync: false
-      - key: DATABASE_URL
-        fromDatabase:
-          name: family-calendar-db
-          property: connectionString
